@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -21,9 +23,28 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-    	${list} 
+    	<table class="table table-bordered table-hover">
+	    	<thead>
+	    		<tr>번호</tr>
+	    		<tr>제목</tr>
+	    		<tr>작성자</tr>
+	    		<tr>작성일</tr>
+	    		<tr>조회수</tr>
+	    	</thead>
+	    	<c:forEach var="vo" items="${list}">
+	    		<tr>
+    				<td>${vo.idx}</td>
+		    		<td>${vo.title}</td>
+		    		<td>${vo.content}</td>
+		    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/></td>
+		    		<td>${vo.count}</td>
+	    		</tr>
+	    	</c:forEach>
+    	</table>
     </div>
-	<div class="panel-footer">스프2탄(답변형 게시판 만들기)</div>
+	<div class="panel-footer">
+		<h3>스프링 게시판</h3>	
+	</div>
   </div>
 </div>
 </body>
