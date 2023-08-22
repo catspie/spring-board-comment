@@ -23,27 +23,25 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-    	<table class="table table-bordered table-hover">
-	    	<thead>
-	    		<tr>번호</tr>
-	    		<tr>제목</tr>
-	    		<tr>작성자</tr>
-	    		<tr>작성일</tr>
-	    		<tr>조회수</tr>
-	    	</thead>
-	    	<c:forEach var="vo" items="${list}">
-	    		<tr>
-    				<td>${vo.idx}</td>
-		    		<td>${vo.title}</td>
-		    		<td>${vo.content}</td>
-		    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/></td>
-		    		<td>${vo.count}</td>
-	    		</tr>
-	    	</c:forEach>
-    	</table>
+    	<form action="${cpath}/board/register }", method="post">
+    		<div class="formGroup">
+    			<label>제목</label>
+    			<input type="text" name="title" class="form-control" />
+    		</div>
+		    <div class="formGroup">
+    			<label>내용</label>
+    			<textarea rows="10" name="content" class="form-control"></textarea>
+    		</div>
+		    <div class="formGroup">
+    			<label>작성자</label>
+    			<input type="text" name="writer" class="form-control" />
+    		</div>
+    		<button type="submit" class="btn btn-default btn-sm">등록</button>
+    		<button type="reset" class="btn btn-default btn-sm">초기화</button>
+    	</form>
     </div>
 	<div class="panel-footer">
-		<h3>스프링 게시판</h3>	
+		<h3>답변형 게시판 만들기</h3>
 	</div>
   </div>
 </div>

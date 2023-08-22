@@ -23,6 +23,12 @@ public class BoardController {
 		List<Board> list = boardService.getList();
 		//객체 바인딩
 		model.addAttribute("list", list); //model
-		return "board/boardList"; //view
+		return "board/list"; //view
+	}
+	
+	@GetMapping("/register")
+	public String register(Model model) {
+		
+		return "board/register"; //view
 	}
 }
