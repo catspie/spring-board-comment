@@ -10,4 +10,5 @@ import kr.bit.entity.Board;
 public interface BoardMapper { //xml, annotation
 
 	public List<Board> getList();
+	
 }

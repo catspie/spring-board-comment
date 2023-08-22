@@ -21,7 +21,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-    
+    	${list} 
     </div>
 	<div class="panel-footer">스프2탄(답변형 게시판 만들기)</div>
   </div>
