@@ -40,6 +40,14 @@
 	   			<td>작성자</td>
 	   			<td>${vo.writer}</td>
    			</tr>
+   			<tr>
+   				<td colspan="2" style="text-align:center;">
+   					<button class="btn btn-cm btn-primary">답글</button>
+   					<button class="btn btn-cm btn-success">수정</button>
+   					<button class="btn btn-cm btn-warning">삭제</button>
+   					<button class="btn btn-cm btn-info">목록</button>
+   				</td>
+   			</tr>
     	</table>
     </div>
 	<div class="panel-footer">
