@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Date"/>
+		<item key="selection" value="reload"/>
 		<list key="findhistory">
+			<item value="reload"/>
+			<item value="cpath"/>
+			<item value="regBtn"/>
+			<item value="head"/>
+			<item value="만들기"/>
+			<item value="servlet"/>
 			<item value="date"/>
 			<item value="java"/>
 			<item value="context"/>
@@ -17,12 +23,6 @@
 			<item value="memName"/>
 			<item value="varchar"/>
 			<item value="junit"/>
-			<item value="mvc"/>
-			<item value="4j"/>
-			<item value="unit"/>
-			<item value="servlet"/>
-			<item value="dependency"/>
-			<item value="data"/>
 		</list>
 		<list key="replacehistory">
 		</list>

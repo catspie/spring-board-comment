@@ -6,4 +6,13 @@
 	select * from tblBoard order by boardGroup desc	
 </select>
 
+<insert id="insert" parameterType="kr.bit.entity.Board">
+	insert into 
+	tblBoard(idx, memId, title, content, writer, boardGroup, boardSequence, boardLevel, boardAvaliable)
+		select 
+			IFNULL(MAX(idx)+1, 1), #{memId}, #{title}, #{content}, #{writer},
+	    	IFNULL(MAX(boardGroup)+1, 0),0, 0, 1
+		from tblBoard 		
+</insert>
+
 </mapper>
