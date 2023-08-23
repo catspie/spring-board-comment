@@ -18,5 +18,7 @@ public interface BoardMapper { //xml, annotation
 	public void insertSelectKey(Board vo);
 	//로그인
 	public Member login(Member vo);
-				
+	//상세보기
+	public Board read(int idx);
+					
 }

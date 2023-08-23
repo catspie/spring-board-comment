@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.bit.entity.Board;
@@ -40,5 +41,12 @@ public class BoardController {
 		//일회성 세션을 사용 > 데이터를 꺼내기 쉬움 ${result}
 		rttr.addFlashAttribute("result", vo.getIdx());
 		return "redirect:/board/list"; //view
+	}
+	
+	@GetMapping("/get")
+	public String get(@RequestParam("idx") int idx, Model model) {
+		Board vo = boardService.get(idx);
+		model.addAttribute("vo", vo);
+		return "board/get"; // 경로: WEB-INF/views/board/get.jsp
 	}
 }

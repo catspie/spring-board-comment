@@ -31,4 +31,10 @@
 	select * from tblMember where memId=#{memId} and memPwd=#{memPwd}
 </select>
 
+<select id="read" resultType="kr.bit.entity.Board" parameterType="int">
+	select * from tblBoard where idx= #{idx}
+</select>
+
+
+
 </mapper>

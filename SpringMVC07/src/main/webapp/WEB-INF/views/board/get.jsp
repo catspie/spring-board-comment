@@ -23,23 +23,24 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-    	<form action="${cpath}/board/register }", method="post">
-    	<input type="hidden" name="memId" value="{mvo.memId}" />
-    		<div class="formGroup">
-    			<label>제목</label>
-    			<input type="text" name="title" class="form-control" />
-    		</div>
-		    <div class="formGroup">
-    			<label>내용</label>
-    			<textarea rows="10" name="content" class="form-control"></textarea>
-    		</div>
-		    <div class="formGroup">
-    			<label>작성자</label>
-    			<input type="text" readonly="readonly" name="writer" class="form-control" value="${mvo.memName}"/>
-    		</div>
-    		<button type="submit" class="btn btn-default btn-sm">등록</button>
-    		<button type="reset" class="btn btn-default btn-sm">초기화</button>
-    	</form>
+    	<table class="table table-bordered">
+   			<tr>
+	   			<td>번호</td>
+	   			<td>${vo.idx}</td>
+   			</tr>
+   			<tr>
+	   			<td>제목</td>
+	   			<td>${vo.title}</td>
+   			</tr>
+   			<tr>
+	   			<td>내용</td>
+	   			<td><textarea readonly="readonly" rows="10" class="form-control">${vo.content}</textarea></td>
+   			</tr>
+   			<tr>
+	   			<td>작성자</td>
+	   			<td>${vo.writer}</td>
+   			</tr>
+    	</table>
     </div>
 	<div class="panel-footer">
 		<h3>답변형 게시판 만들기</h3>
