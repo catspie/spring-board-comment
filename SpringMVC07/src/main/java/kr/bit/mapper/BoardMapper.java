@@ -13,4 +13,7 @@ public interface BoardMapper { //xml, annotation
 	public List<Board> getList();
 	//등록처리
 	public void insert(Board vo);
+	//등록처리2
+	public void insertSelectKey(Board vo);
+		
 }

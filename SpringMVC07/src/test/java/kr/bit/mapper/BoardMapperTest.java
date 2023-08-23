@@ -26,14 +26,20 @@ public class BoardMapperTest {
 	 * for(Board vo : list) { System.out.println(vo); log.info(vo); } }
 	 */
 	
+	/*
+	 * @Test public void testInsert() { Board vo = new Board();
+	 * vo.setMemId("bit01"); vo.setTitle("A"); vo.setContent("새로 작성한 글");
+	 * vo.setWriter("관리자"); boardMapper.insert(vo); log.info(vo); }
+	 */
+	
 	@Test
-	public void testInsert() {
+	public void testInsert2() {
 			Board vo = new Board();
-			vo.setMemId("bit01");
-			vo.setTitle("A");
+			vo.setMemId("bit03");
+			vo.setTitle("C");
 			vo.setContent("새로 작성한 글");
-			vo.setWriter("관리자");
-			boardMapper.insert(vo);
+			vo.setWriter("홍길동");
+			boardMapper.insertSelectKey(vo);
 			log.info(vo);
 	}
 	
