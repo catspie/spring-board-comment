@@ -62,4 +62,10 @@ public class BoardController {
 		boardService.modify(vo); //수정
 		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
 	}
+	
+	@GetMapping("/remove")
+	public String remove(int idx) {
+		boardService.remove(idx);
+		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
+	}
 }

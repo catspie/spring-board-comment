@@ -43,8 +43,15 @@
 	   			</tr>
    			<tr>
    				<td colspan="2" style="text-align: center;">
+   				<c:if test="${!empty mvo}">
    					<button class="btn btn-cm btn-primary">답글</button>
    					<button class="btn btn-cm btn-success" onclick="location.href='${cpath}/board/modify?idx=${vo.idx}'">수정</button>
+ 				</c:if>
+   				<c:if test="${empty mvo}">
+   					<button disabled="disabled" class="btn btn-cm btn-primary">답글</button>
+   					<button disabled="disabled" class="btn btn-cm btn-success" onclick="location.href='${cpath}/board/modify?idx=${vo.idx}'">수정</button>
+ 				</c:if>
+ 				
    					<button class="btn btn-cm btn-info" onclick="location.href='${cpath}/board/list'">목록</button>
    				</td>
    			</tr>
