@@ -28,5 +28,6 @@
 	
 	<!-- 어노테이션이 붙어있는 것들만 인식함 -->
 	<mybatis-spring:scan base-package="kr.bit.mapper" />
+	<context:component-scan base-package="kr.bit.service" />
 	
 </beans>

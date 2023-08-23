@@ -29,4 +29,9 @@ public class BoardServiceImpl implements BoardService{
 		return mvo;
 	}
 
+	@Override
+	public void register(Board vo) {
+		boardMapper.insertSelectKey(vo);
+	}
+
 }

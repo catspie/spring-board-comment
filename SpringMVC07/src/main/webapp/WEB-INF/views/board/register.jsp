@@ -24,6 +24,7 @@
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
     	<form action="${cpath}/board/register }", method="post">
+    	<input type="hidden" name="memId" value="{mvo.memId}" />
     		<div class="formGroup">
     			<label>제목</label>
     			<input type="text" name="title" class="form-control" />
@@ -34,7 +35,7 @@
     		</div>
 		    <div class="formGroup">
     			<label>작성자</label>
-    			<input type="text" name="writer" class="form-control" />
+    			<input type="text" readonly name="writer" class="form-control" value="${mvo.memName}"/>
     		</div>
     		<button type="submit" class="btn btn-default btn-sm">등록</button>
     		<button type="reset" class="btn btn-default btn-sm">초기화</button>

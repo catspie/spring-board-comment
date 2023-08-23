@@ -67,6 +67,7 @@
     				<td>${vo.idx}</td>
 		    		<td>${vo.title}</td>
 		    		<td>${vo.content}</td>
+		    		<td>${vo.writer}</td>
 		    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/></td>
 		    		<td>${vo.count}</td>
 	    		</tr>

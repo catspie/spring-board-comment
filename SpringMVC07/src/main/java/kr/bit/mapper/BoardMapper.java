@@ -12,11 +12,11 @@ public interface BoardMapper { //xml, annotation
 
 	//전체목록
 	public List<Board> getList();
-	//등록처리
+	//등록처리 ver.1
 	public void insert(Board vo);
-	//등록처리2
+	//등록처리 ver.2
 	public void insertSelectKey(Board vo);
 	//로그인
 	public Member login(Member vo);
-			
+				
 }
