@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.bit.entity.Board;
+import kr.bit.entity.Member;
 
 @Mapper
 public interface BoardMapper { //xml, annotation
@@ -15,5 +16,7 @@ public interface BoardMapper { //xml, annotation
 	public void insert(Board vo);
 	//등록처리2
 	public void insertSelectKey(Board vo);
-		
+	//로그인
+	public Member login(Member vo);
+			
 }

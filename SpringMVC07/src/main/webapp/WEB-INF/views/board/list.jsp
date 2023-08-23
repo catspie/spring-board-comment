@@ -28,7 +28,31 @@
 <div class="container">
   <h2>Spring MVC</h2>
   <div class="panel panel-default">
-    <div class="panel-heading">BOARD</div>
+    <div class="panel-heading">
+		<c:if test = "${empty mvo}">
+		  <form class="form-inline" action="${cpath}/login/loginProcess" method="post">
+		    <div class="form-group">
+		      <label for="memId">ID:</label>
+		      <input type="text" class="form-control" id="memId" placeholder="Enter memId" name="memId">
+		    </div>
+		    <div class="form-group">
+		      <label for="memPwd">Password:</label>
+		      <input type="password" class="form-control" id="memPwd" placeholder="Enter password" name="memPwd">
+		    </div>
+		    <button type="submit" class="btn btn-default">로그인</button>
+		  </form>
+	  	</c:if>
+		</div>
+		<c:if test = "${!empty mvo}">
+		  <form class="form-inline" action="${cpath}/login/logoutProcess" method="post">
+		    <div class="form-group">
+		      <label>${mvo.memName}님 방문을 환영합니다.</label>
+		    </div>
+		    <button type="submit" class="btn btn-default">로그아웃</button>
+		  </form>
+	  	</c:if>
+		</div>
+    </div>
     <div class="panel-body">
     	<table class="table table-bordered table-hover">
 	    	<thead>
@@ -49,7 +73,9 @@
 	    	</c:forEach>
 	    	<tr>
 	    		<td colspan="5">
-	    			<button type=button" id="regBtn" class="btn btn-xs pull-right">글쓰기</button>
+	    			<c:if test="${!empty mvo}">
+	    				<button type=button" id="regBtn" class="btn btn-sm btn-primary pull-right">글쓰기</button>
+	    			</c:if>
 	    		</td>
 	    	</tr>
     	</table>
