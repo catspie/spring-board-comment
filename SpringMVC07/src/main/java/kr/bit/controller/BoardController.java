@@ -49,4 +49,17 @@ public class BoardController {
 		model.addAttribute("vo", vo);
 		return "board/get"; // 경로: WEB-INF/views/board/get.jsp
 	}
+
+	@GetMapping("/modify")
+	public String modify(@RequestParam("idx") int idx, Model model) {
+		Board vo = boardService.get(idx);
+		model.addAttribute("vo", vo);
+		return "board/modify"; // 경로: WEB-INF/views/board/get.jsp
+	}
+	
+	@PostMapping("/modify")
+	public String modify(Board vo) {
+		boardService.modify(vo); //수정
+		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
+	}
 }

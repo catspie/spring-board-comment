@@ -23,6 +23,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
+    <form action="${cpath}/board/modify" method="post">
     	<table class="table table-bordered">
    			<tr>
 	   			<td>번호</td>
@@ -31,24 +32,25 @@
    			</tr>
    			<tr>
 	   			<td>제목</td>
-	   			<td><input type="text" readonly="readonly" value="${vo.title}" class="form-control" name="title"/></td>	   			
+	   			<td><input type="text" value="${vo.title}" class="form-control" name="title"/></td>	   			
    			</tr>
    			<tr>
 	   			<td>내용</td>
-	   			<td><textarea readonly="readonly" rows="10" class="form-control" name="content">${vo.content}</textarea></td>
+	   			<td><textarea rows="10" class="form-control" name="content">${vo.content}</textarea></td>
    			</tr>
    			<tr>
 	   			<td>작성자</td>
 	   			<td><input type="text" readonly="readonly" value="${vo.writer}" class="form-control" name="writer"/></td>	   			
 	   			</tr>
    			<tr>
-   				<td colspan="2" style="text-align: center;">
-   					<button class="btn btn-cm btn-primary">답글</button>
-   					<button class="btn btn-cm btn-success" onclick="location.href='${cpath}/board/modify?idx=${vo.idx}'">수정</button>
-   					<button class="btn btn-cm btn-info" onclick="location.href='${cpath}/board/list'">목록</button>
+   				<td colspan="2" style="text-align:center;">
+   					<button type="submit" class="btn btn-cm btn-primary">수정</button>
+   					<button type="button" class="btn btn-cm btn-warning" onclick="location.href=${cpath}/board/remove?idx=${vo.idx}'">삭제</button>
+   					<button type="button" class="btn btn-cm btn-info" onclick="location.href='${cpath}/board/list'">목록</button>
    				</td>
    			</tr>
     	</table>
+    	</form>
     </div>
 	<div class="panel-footer">
 		<h3>답변형 게시판 만들기</h3>

@@ -40,4 +40,9 @@ public class BoardServiceImpl implements BoardService{
 		return vo;
 	}
 
+	@Override
+	public void modify(Board vo) {
+		boardMapper.update(vo);	
+	}
+
 }

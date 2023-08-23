@@ -10,4 +10,5 @@ public interface BoardService {
 	public Member login(Member vo);	
 	public void register(Board vo);
 	public Board get(int idx);
+	public void modify(Board vo);
 }

@@ -20,5 +20,7 @@ public interface BoardMapper { //xml, annotation
 	public Member login(Member vo);
 	//상세보기
 	public Board read(int idx);
-					
+	//수정
+	public void update(Board vo);
+						
 }

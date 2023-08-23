@@ -35,6 +35,9 @@
 	select * from tblBoard where idx= #{idx}
 </select>
 
-
+<update id="update" parameterType="kr.bit.entity.Board">
+	update tblBoard set title=#{title}, content=#{content}
+	where idx=#{idx}
+</update>
 
 </mapper>

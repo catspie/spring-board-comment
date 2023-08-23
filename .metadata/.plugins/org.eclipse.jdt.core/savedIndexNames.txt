@@ -23,7 +23,6 @@ INDEX VERSION 1.131+C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.ecli
 2353067016.index
 242089500.index
 184256440.index
-1745127921.index
 1826434085.index
 2355584321.index
 3190991472.index
