@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.bit.entity.Board;
 import kr.bit.service.BoardService;
@@ -33,8 +34,11 @@ public class BoardController {
 	}
 	
 	@PostMapping("/register*")
-	public String register(Board vo) { //파라미터 수집 > vo에 <--한글 encoding 필수 > pom에 설정
-		boardService.register(vo); //게시물 등록
+	public String register(Board vo, RedirectAttributes rttr) { //파라미터 수집(vo) <--한글 encoding 필수 > pom에 설정
+		boardService.register(vo); //게시물 등록(vo->idx,boardGroup)
+		System.out.println(vo);
+		//일회성 세션을 사용 > 데이터를 꺼내기 쉬움 ${result}
+		rttr.addFlashAttribute("result", vo.getIdx());
 		return "redirect:/board/list"; //view
 	}
 }
