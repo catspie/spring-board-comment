@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="reload"/>
+		<item key="selection" value="수정"/>
 		<list key="findhistory">
-			<item value="reload"/>
-			<item value="cpath"/>
-			<item value="regBtn"/>
-			<item value="head"/>
-			<item value="만들기"/>
-			<item value="servlet"/>
-			<item value="date"/>
-			<item value="java"/>
-			<item value="context"/>
-			<item value="root"/>
-			<item value="view"/>
-			<item value="bit03"/>
-			<item value="memName"/>
-			<item value="varchar"/>
-			<item value="junit"/>
+			<item value="수정"/>
+			<item value="삭제"/>
+			<item value="modal"/>
+			<item value="check"/>
+			<item value="post"/>
+			<item value="답글"/>
+			<item value="readonly"/>
+			<item value="read"/>
+			<item value="location"/>
+			<item value="register"/>
+			<item value="annotation"/>
+			<item value="javaee"/>
+			<item value="empty"/>
+			<item value="logoutprocess"/>
+			<item value="글쓰기"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -33,5 +33,9 @@
 		<item key="DIALOG_WIDTH" value="340"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="205"/>
+		<item key="DIALOG_Y_ORIGIN" value="344"/>
 	</section>
 </section>
