@@ -24,5 +24,9 @@ public interface BoardMapper { //xml, annotation
 	public void update(Board vo);
 	//삭제
 	public void delete(int idx);
-						
+	//답글수정
+	public void replySeqUpdate(Board parent);
+	//답글등록
+	public void replyInsert(Board vo);
+							
 }

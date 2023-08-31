@@ -68,4 +68,22 @@ public class BoardController {
 		boardService.remove(idx);
 		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
 	}
+	
+	@GetMapping("/reply")
+	public String reply(int idx, Model model) {
+		Board vo = boardService.get(idx);
+		model.addAttribute("vo",vo);
+		return "board/reply";	// 경로: WEB-INF/views/board/reply.jsp	
+	}
+	
+	//vo에 파라미터 수집
+	@PostMapping("/reply")
+	public String reply(Board vo) {
+		//답글에 필요한 처리...
+		
+		boardService.replyProcess(vo); //답글저장됨
+		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
+	}
+
+
 }
