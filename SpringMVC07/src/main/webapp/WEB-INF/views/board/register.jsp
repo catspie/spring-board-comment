@@ -24,7 +24,7 @@
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
     	<form action="${cpath}/board/register }", method="post">
-    	<input type="hidden" name="memId" value="{mvo.memId}" />
+    	<input type="hidden" name="memId" value="${mvo.memId}" />
     		<div class="formGroup">
     			<label>제목</label>
     			<input type="text" name="title" class="form-control" />

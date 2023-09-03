@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="수정"/>
+		<item key="selection" value="relo"/>
 		<list key="findhistory">
+			<item value="relo"/>
+			<item value="제목"/>
+			<item value="error"/>
+			<item value="답글"/>
 			<item value="수정"/>
 			<item value="삭제"/>
 			<item value="modal"/>
 			<item value="check"/>
 			<item value="post"/>
-			<item value="답글"/>
 			<item value="readonly"/>
 			<item value="read"/>
 			<item value="location"/>
 			<item value="register"/>
 			<item value="annotation"/>
 			<item value="javaee"/>
-			<item value="empty"/>
-			<item value="logoutprocess"/>
-			<item value="글쓰기"/>
 		</list>
 		<list key="replacehistory">
 		</list>

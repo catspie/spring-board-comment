@@ -12,6 +12,10 @@ INDEX VERSION 1.131+C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.ecli
 288835818.index
 1679092241.index
 3925559595.index
+<<<<<<< HEAD
+=======
+3508198181.index
+>>>>>>> sy/feat-1
 1508434400.index
 147131623.index
 3426240753.index
@@ -22,6 +26,10 @@ INDEX VERSION 1.131+C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.ecli
 2353067016.index
 242089500.index
 184256440.index
+<<<<<<< HEAD
+=======
+1745127921.index
+>>>>>>> sy/feat-1
 1826434085.index
 2355584321.index
 3190991472.index
