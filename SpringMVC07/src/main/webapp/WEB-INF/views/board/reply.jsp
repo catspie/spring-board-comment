@@ -26,7 +26,7 @@
     	<form action="${cpath}/board/reply ", method="post">
 	    	<!-- 폼 전송시 필요한 값을 hidden으로 받기: idx(원글, 부모글) -->
 	    	<input type="hidden" name="idx" value="${vo.idx}" />
-	    	<input type="hidden" name="memId" value="{mvo.memId}" />
+	    	<input type="hidden" name="memId" value="${mvo.memId}" />
     		<div class="formGroup">
     			<label>제목</label>
     			<input type="text" name="title" class="form-control" value="${vo.title}"/>

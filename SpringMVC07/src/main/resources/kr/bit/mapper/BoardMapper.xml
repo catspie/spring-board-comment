@@ -3,7 +3,7 @@
 <mapper namespace="kr.bit.mapper.BoardMapper">
 
 <select id="getList" resultType="kr.bit.entity.Board">
-	select * from tblBoard order by boardGroup desc, boardSequence desc	
+	select * from tblBoard order by boardGroup desc, boardSequence asc	
 </select>
 
 <insert id="insert" parameterType="kr.bit.entity.Board">
@@ -18,7 +18,8 @@
 <insert id="insertSelectKey" parameterType="kr.bit.entity.Board">
 	<selectKey keyProperty="idx,boardGroup" resultType="kr.bit.entity.Board" order="BEFORE">
 		select 
-			IFNULL(MAX(idx)+1, 1) as idx
+			IFNULL(MAX(idx)+1, 1) as idx, 
+			IFNULL(MAX(boardGroup)+1, 1) as boardGroup
     	from tblBoard
 	</selectKey>
 	insert into 
