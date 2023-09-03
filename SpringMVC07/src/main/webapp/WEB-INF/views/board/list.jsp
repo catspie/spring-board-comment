@@ -87,9 +87,11 @@
 		    			</c:forEach>
 		    		</c:if>
 		    		<c:if test="${vo.boardLevel>0}">
-		    		[RE]
+    				<a href="${cpath}/board/get?idx=${vo.idx}">[RE]${vo.title}</a>
     				</c:if>
+		    		<c:if test="${vo.boardLevel==0}">
     				<a href="${cpath}/board/get?idx=${vo.idx}">${vo.title}</a>
+    				</c:if>
     				</td>
 		    		<td>${vo.writer}</td>
 		    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/></td>
