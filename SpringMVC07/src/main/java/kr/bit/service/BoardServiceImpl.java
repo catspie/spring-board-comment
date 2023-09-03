@@ -67,5 +67,4 @@ public class BoardServiceImpl implements BoardService{
 		//6. 답글을 (vo) 저장하기 
 		boardMapper.replyInsert(vo);
 	}
-
 }

@@ -80,8 +80,7 @@ public class BoardController {
 	@PostMapping("/reply")
 	public String reply(Board vo) {
 		//답글에 필요한 처리...
-		
-		boardService.replyProcess(vo); //답글저장됨
+		boardService.replyProcess(vo); //답글 저장
 		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
 	}
 
