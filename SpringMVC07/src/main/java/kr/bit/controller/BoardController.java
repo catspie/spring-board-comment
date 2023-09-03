@@ -83,6 +83,4 @@ public class BoardController {
 		boardService.replyProcess(vo); //답글 저장
 		return "redirect:/board/list"; // 경로: WEB-INF/views/board/get.jsp
 	}
-
-
 }

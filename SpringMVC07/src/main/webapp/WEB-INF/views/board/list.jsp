@@ -86,12 +86,25 @@
 							<span style="padding-left: 10px"></span>
 		    			</c:forEach>
 		    		</c:if>
+		    		
 		    		<c:if test="${vo.boardLevel>0}">
-    				<a href="${cpath}/board/get?idx=${vo.idx}">[RE]${vo.title}</a>
+			    		<c:if test="${vo.boardAvailable==1}">
+    						<a href="${cpath}/board/get?idx=${vo.idx}">[RE]${vo.title}</a>
+    					</c:if>
+			    		<c:if test="${vo.boardAvailable==0}">
+    						<a href="${cpath}/board/get?idx=${vo.idx}">삭제된 게시물입니다.</a>
+    					</c:if>
     				</c:if>
+    				
 		    		<c:if test="${vo.boardLevel==0}">
-    				<a href="${cpath}/board/get?idx=${vo.idx}">${vo.title}</a>
-    				</c:if>
+			    		<c:if test="${vo.boardAvailable==1}">
+    						<a href="${cpath}/board/get?idx=${vo.idx}">${vo.title}</a>
+    					</c:if>
+    					<c:if test="${vo.boardAvailable==0}">
+    						<a href="${cpath}/board/get?idx=${vo.idx}">삭제된 게시물입니다.</a>
+    					</c:if>
+   					</c:if>
+   					
     				</td>
 		    		<td>${vo.writer}</td>
 		    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/></td>

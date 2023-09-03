@@ -41,7 +41,8 @@
 </update>
 
 <delete id="delete">
-	delete from tblBoard	
+	update tblBoard	
+	set boardAvailable = 0	
 	where idx=#{idx}
 </delete>
 
@@ -49,7 +50,6 @@
 	update tblBoard set boardSequence = boardSequence+1
 	where boardGroup = #{boardGroup} and boardSequence > #{boardSequence}
 </update>
-
 
 <insert id="replyInsert" parameterType="kr.bit.entity.Board">
 	<selectKey keyProperty="idx" resultType="kr.bit.entity.Board" order="BEFORE">
